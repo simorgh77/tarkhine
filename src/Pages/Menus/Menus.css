@@ -1,0 +1,208 @@
+/***
+menus first section
+***/
+
+.menus-banner {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), linear-gradient(0deg, #21402B, #21402B), url(/public/img/menus/hero-img.jpg);
+    background-blend-mode: normal, overlay, normal;
+    height: 33.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.menus-cover {
+    padding: 0;
+    width: 100%;
+    height: 33.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.menus-cover__item {
+    width: 100%;
+    height: 33.6rem;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(.6);
+}
+
+/***
+Filter
+***/
+.menus-filter {
+    position: relative;
+    padding: 0;
+    background-color: var(--gray-3);
+}
+
+.menus-filter-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1.6rem 0;
+    gap: 3.2rem;
+    margin-bottom: 2.8rem;
+    overflow-y: auto;
+}
+
+.menus-filter__item {
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: var(--gray-7);
+    transition: all .2s ease;
+}
+
+.menus-filter__item.active {
+    color: var(--green);
+    font-family: var(--font-bold);
+    position: relative;
+    transition: all .2s ease;
+}
+
+.menus-filter__item.active::after {
+    content: "";
+    position: absolute;
+    bottom: -1.6rem;
+    width: 100%;
+    height: .3rem;
+    background-color: var(--green);
+    left: 0;
+    right: 0;
+}
+
+/***
+Filter base type
+***/
+.menus-type__list {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    font-size: 1.6rem;
+    color: var(--gray-8);
+}
+
+.menus-type__list-item {
+    background: var(--gray-3);
+    padding: 0 0.8rem;
+    border-radius: var(--radius-s);
+    cursor: pointer;
+    transition: all .2s ease;
+    user-select: none;
+}
+
+.menus-type__list-item.active {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.menu-types__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.menu-types__price {
+    border: 0.1rem solid var(--gray-3);
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius-s);
+    color: var(--gray-8);
+    background: var(--gray-3);
+    font-size: 1.6rem;
+    font-family: var(--font);
+}
+
+.menu-types__price:focus {
+    outline: none;
+}
+
+.menu-types__price-item {
+    font-size: 1.4rem;
+}
+
+
+
+/***Persian food section
+***/
+.menus__title {
+    color: var(--gray-8);
+    margin-bottom: 2.4rem;
+}
+
+
+/***
+product banner modal
+***/
+.product-modal {
+    position: fixed;
+    top: -120%;
+    left: 0;
+    z-index: 100;
+    backdrop-filter: blur(0.5rem);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s ease;
+}
+
+.product-modal.active {
+    top: 0;
+}
+
+.product-modal__wrapper {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+    border-radius: var(--radius-xs);
+}
+
+.product-modal__close {
+    position: absolute;
+    left: 2%;
+    top: 4%;
+    background: var(--error-light);
+    font-size: 2.5rem;
+    color: var(--white);
+    border-radius: var(--radius-s);
+    cursor: pointer;
+}
+
+.product-modal__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+/*****
+Media Queries
+*****/
+
+/*** xxl ***/
+
+@media (max-width: 1400px) {}
+
+/*** xl ***/
+
+@media (max-width: 1200px) {}
+
+/*** lg ***/
+
+@media (max-width: 992px) {}
+
+/*** md ***/
+
+@media (max-width: 768px) {}
+
+/*** sm ***/
+
+@media (max-width: 576px) {}

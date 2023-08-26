@@ -1,0 +1,179 @@
+.header {
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: var(--white);
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header__responsive-icon {
+    position: relative;
+    width: 3.2rem;
+    height: .2rem;
+    background-color: var(--green);
+    cursor: pointer;
+    display: none;
+    transition: all 0s ease;
+}
+
+.header__responsive-icon::after,
+.header__responsive-icon::before {
+    content: "";
+    width: 100%;
+    height: .2rem;
+    background-color: var(--green);
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition: all .2s ease;
+}
+
+.header__responsive-icon::after {
+    top: -.8rem;
+}
+
+.header__responsive-icon::before {
+    bottom: -.8rem;
+}
+
+.header__responsive-icon.active {
+    background-color: transparent;
+}
+
+.header__responsive-icon.active::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.header__responsive-icon.active::before {
+    transform: rotate(45deg);
+    bottom: 0;
+}
+
+.header__brand {
+    padding: 2.2rem 0;
+}
+
+
+.header__icons {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.header__icons-item {
+    background-color: var(--green-t-1);
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    color: var(--green);
+    border-radius: var(--radius-s);
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.header__icons-item:hover {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+/**
+Media Queries
+**/
+
+
+/*** xxl ***/
+
+@media (max-width: 1400px) {}
+
+/*** xl ***/
+
+@media (max-width: 1200px) {
+    .header__brand-logo {
+        width: 12.5rem;
+    }
+
+    .header__menu {
+        gap: 1.8rem;
+    }
+
+    .header__menu-list {
+        font-size: 1.7rem;
+    }
+
+    .navbar__submenu-item-link {
+        font-size: 1.6rem;
+    }
+
+    .header__icons-item {
+        width: 3.8rem;
+        height: 3.8rem;
+    }
+}
+
+/*** lg ***/
+
+@media (max-width: 992px) {
+    .header__brand-logo {
+        width: 8.5rem;
+    }
+
+    .header__menu {
+        gap: 1rem;
+    }
+
+    .header__menu-list {
+        font-size: 1.5rem;
+    }
+
+    .navbar__submenu-item-link {
+        font-size: 1.4rem;
+    }
+
+    .header__icons-item {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+/*** md ***/
+
+@media (max-width: 768px) {
+
+    .navbar,
+    .header__icons--user {
+        display: none;
+    }
+
+    .responsive-menu,
+    .header__responsive-icon {
+        display: block;
+    }
+
+    .header__icons-item {
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+/*** sm ***/
+
+@media (max-width: 576px) {
+
+
+    .responsive-menu {
+        width: 75%;
+    }
+}

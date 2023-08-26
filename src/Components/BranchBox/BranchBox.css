@@ -1,0 +1,241 @@
+.branch-box {
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-2);
+    border-radius: var(--radius-s);
+    transition: all .2s ease;
+    height: 34.2rem;
+    display: block;
+}
+
+.branch-box:hover {
+    box-shadow: var(--shadow-4);
+}
+
+.branch-box__cover {
+    width: 100%;
+    height: 23rem;
+    object-fit: cover;
+    object-position: center center;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.branch-box:hover .branch-box__cover {
+    height: 19rem;
+    filter: brightness(50%);
+}
+
+.branch-box__cover-icon {
+    position: absolute;
+    top: -5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: all .2s ease;
+    color: var(--white);
+    background: rgb(255 255 255 / 30%);
+    padding: 0.6rem;
+    font-size: 4rem;
+    border-radius: 50%;
+    border: 0.6rem solid rgba(255, 255, 255, 0.2);
+}
+
+.branch-box:hover .branch-box__cover-icon {
+    top: 8rem;
+}
+
+.branch-box__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0 0.8rem 1.6rem;
+}
+
+.branch-box__title>a {
+    color: var(--black);
+    transition: all .2s ease;
+}
+
+.branch-box:hover .branch-box__title>a {
+    color: var(--green-sh-2);
+}
+
+.branch-box__desc {
+    font-size: 1.4rem;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: var(--gray-8);
+}
+
+.branch-box__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .1rem solid var(--green-sh-2);
+    color: var(--green-sh-2);
+    border-radius: var(--radius-xs);
+    padding: 0 1.6rem;
+    font-size: 1.4rem;
+    transition: all .2s ease;
+    position: absolute;
+    bottom: -5rem;
+}
+
+.branch-box:hover .branch-box__button {
+    bottom: 2rem;
+}
+
+.branch-box__button:hover {
+    background-color: var(--green-sh-2);
+    color: var(--white);
+}
+
+/*
+branch gallery modal
+*/
+.branch-gallery {
+    position: fixed;
+    top: -200%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(0.5rem);
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s ease;
+}
+
+.branch-gallery.active {
+    top: 0;
+}
+
+.branch-gallery__wrapper {
+    width: 80rem;
+    height: 40rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-radius: var(--radius-xs)
+}
+
+.branch-gallery__close {
+    position: absolute;
+    top: 2.4rem;
+    left: 2.4rem;
+    color: var(--white);
+    font-size: 3.4rem;
+    cursor: pointer;
+}
+
+.branch-gallery__images {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    gap: 2.4rem;
+    padding: .8rem 2.4rem;
+    overflow-x: auto;
+}
+
+.branch-gallery__images::-webkit-scrollbar {
+    width: .5rem;
+    height: .8rem;
+}
+
+.branch-gallery__images::-webkit-scrollbar-track {
+    background-color: var(--gray-2);
+}
+
+.branch-gallery__images::-webkit-scrollbar-thumb {
+    background-color: var(--gray-6);
+    border-radius: var(--radius-xs);
+}
+
+.branch-gallery__images::-webkit-scrollbar-thumb:hover {
+    border-radius: var(--radius-xs);
+    background-color: var(--green);
+}
+
+.branch-gallery__images-item {
+    flex: 1 1 auto;
+    width: 15%;
+    height: 8rem;
+    object-fit: cover;
+    object-position: center center;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+    border-radius: var(--radius-s);
+    cursor: pointer;
+}
+
+
+/*
+style for responsive branch box
+*/
+
+@media (max-width: 1200px) {
+
+    .branch-box__cover {
+        height: 20rem;
+    }
+
+    .branch-gallery__wrapper {
+        width: 60rem;
+        height: 30rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .branch-box {
+        display: flex;
+        align-items: center;
+        height: auto;
+    }
+
+    .branch-box>* {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+    .branch-box__cover {
+        height: 15rem;
+    }
+
+    .branch-box__title {
+        font-size: 1.6rem;
+    }
+
+    .branch-box__desc {
+        font-size: 1.2rem;
+    }
+
+    .branch-box__cover-icon {
+        display: none;
+    }
+
+
+}
+
+@media(max-width: 576px) {
+    .branch-gallery__wrapper {
+        width: 54rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    .branch-gallery__images-item {
+        height: 6rem;
+    }
+}
