@@ -1,11 +1,12 @@
 .contact-banner {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), linear-gradient(0deg, #21402B, #21402B), url(img/contact/contact.jpg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), linear-gradient(0deg, #21402B, #21402B), url(/public/img/contact/contact.jpg);
     background-blend-mode: normal, overlay, normal;
     height: 33.6rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-attachment: fixed;
 }
 

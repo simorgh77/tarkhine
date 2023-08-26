@@ -1,13 +1,13 @@
 .faq-banner {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), linear-gradient(0deg, #21402B, #21402B), url(img/faq/faq.jpg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), linear-gradient(0deg, #21402B, #21402B), url(/public/img/faq/faq.jpg);
     background-blend-mode: normal, overlay, normal;
     height: 33.6rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;
     background-attachment: fixed;
-    background-position: right center;
 }
 
 .faq-banner__desc {
