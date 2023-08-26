@@ -1,0 +1,42 @@
+.contact-banner {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), linear-gradient(0deg, #21402B, #21402B), url(img/contact/contact.jpg);
+    background-blend-mode: normal, overlay, normal;
+    height: 33.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contact-banner__desc {
+    color: var(--green-t-1);
+    display: none;
+}
+
+
+
+/***
+MediA queries
+***/
+
+/*** xl ***/
+
+@media (max-width: 1200px) {
+    .contact-box__content {
+        padding: 2.4rem;
+        gap: .8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-banner__desc {
+        display: block;
+    }
+
+    .contact__img {
+        display: none;
+    }
+
+    
+}

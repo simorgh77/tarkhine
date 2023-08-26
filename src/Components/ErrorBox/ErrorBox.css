@@ -1,0 +1,16 @@
+.error-box {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error-box__title {
+    font-family: var(--font-bold);
+    color: var(--error);
+}
+
+.error-box__desc {
+    font-size: 1.6rem;
+    color: var(--error-light);
+}

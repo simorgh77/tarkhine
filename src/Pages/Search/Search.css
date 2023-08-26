@@ -1,0 +1,38 @@
+/***
+not found page
+***/
+.search-empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.search-empty__title {
+    font-size: 2rem;
+    color: var(--gray-8);
+}
+
+.search-empty__banner {
+    max-width: 39rem;
+}
+
+/***
+search page with result
+***/
+.search__title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.4rem;
+    font-size: 2.2rem;
+    color: var(--gray-8);
+}
+
+.search__title-result {
+    display: inline-block;
+    margin-right: 0.8rem;
+    font-family: var(--font-bold);
+    color: var(--green);
+    cursor: pointer;
+}

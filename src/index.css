@@ -1,0 +1,246 @@
+@font-face {
+  font-family: "Estedad";
+  src: url("../src/Fonts/Estedad-FD-Medium.woff2")
+}
+
+@font-face {
+  font-family: "Estedad Bold";
+  src: url("../src/Fonts/Estedad-FD-Bold.woff2")
+}
+
+html {
+  font-size: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+:root {
+  --font: "Estedad";
+  --font-bold: "Estedad Bold";
+  --green-t-1: rgba(229, 242, 233, 1);
+  --green-t-2: rgba(202, 228, 211, 1);
+  --green-t-3: rgba(176, 215, 189, 1);
+  --green-t-4: rgba(150, 201, 167, 1);
+  --green-t-5: rgba(124, 188, 145, 1);
+  --green-t-6: rgba(97, 174, 123, 1);
+  --green-t-7: rgba(78, 153, 104, 1);
+  --green: rgba(65, 127, 86, 1);
+  --green-sh-1: rgba(57, 111, 75, 1);
+  --green-sh-2: rgba(49, 95, 65, 1);
+  --green-sh-3: rgba(41, 79, 54, 1);
+  --green-sh-4: rgba(33, 64, 43, 1);
+  --green-sh-5: rgba(24, 48, 32, 1);
+  --green-sh-6: rgba(16, 32, 22, 1);
+  --green-sh-7: rgba(8, 16, 11, 1);
+  --white: rgba(255, 255, 255, 1);
+  --gray-1: rgba(249, 249, 249, 1);
+  --gray-2: rgba(249, 249, 249, 1);
+  --gray-3: rgba(237, 237, 237, 1);
+  --gray-4: rgba(203, 203, 203, 1);
+  --gray-5: rgba(203, 203, 203, 1);
+  --gray-6: rgba(173, 173, 173, 1);
+  --gray-7: rgba(117, 117, 117, 1);
+  --gray-8: rgba(53, 53, 53, 1);
+  --black: rgba(12, 12, 12, 1);
+  --error: rgba(195, 0, 0, 1);
+  --error-light: rgba(237, 46, 46, 1);
+  --error-x-light: rgba(255, 242, 242, 1);
+  --success: rgba(0, 150, 109, 1);
+  --success-light: rgba(0, 186, 136, 1);
+  --success-x-light: rgba(243, 253, 250, 1);
+  --warning: rgba(169, 121, 28, 1);
+  --warning-light: rgba(244, 183, 64, 1);
+  --warning-x-light: rgba(255, 248, 225, 1);
+  --radius-xs: .4rem;
+  --radius-s: .8rem;
+  --radius-m: .1.6rem;
+  --radius-l: 2.4rem;
+  --radius-xl: 3.2rem;
+  --radius-xxl: 6.4rem;
+  --shadow-2: 0 .2rem .2rem rgba(0, 0, 0, 0.25);
+  --shadow-4: 0 .4rem .4rem rgba(0, 0, 0, 0.25);
+  --shadow-6: 0 .6rem .6rem rgba(0, 0, 0, 0.25);
+  --shadow-8: 0 .8rem .8rem rgba(0, 0, 0, 0.25);
+  --shadow-12: 0r 1.2rem 1.2rem rgba(0, 0, 0, 0.25);
+  --shadow-16: 0 1.6rem 1.6rem rgba(0, 0, 0, 0.25);
+  --shadow-card: 0 1.6rem .6rem rgba(0, 0, 0, 0.01), 0 .9rem .5rem rgba(0, 0, 0, 0.05), 0r .4rem .4rem rgba(0, 0, 0, 0.09), 0 .1rem .2rem rgba(0, 0, 0, 0.1), 0 0 0 rgba(0, 0, 0, 0.1);
+  --shadow-contact-cart: 0 4.2rem 1.7rem rgba(0, 0, 0, 0.01), 0 2.4rem 1.4rem rgba(0, 0, 0, 0.05), 0 1.1rem 1.1rem rgba(0, 0, 0, 0.09), 0 .3rem .6rem rgba(0, 0, 0, 0.1), 0 0 0 rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: inherit;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: var(--font);
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block
+}
+
+
+body {
+  direction: rtl;
+  font-family: var(--font), Arial, Helvetica, sans-serif;
+  color: var(--black);
+  font-size: inherit;
+  background-color: var(--white);
+  cursor: default;
+  font-size: 1.8rem;
+}
+
+ol,
+ul {
+  list-style: none
+}
+
+blockquote,
+q {
+  quotes: none
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: '';
+  content: none
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+a {
+  text-decoration: none
+}
+
+
+*,
+::after,
+::before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit
+}
+
+
+/***Default style ***/
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-bold);
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+section {
+  padding: 4.8rem 0;
+}

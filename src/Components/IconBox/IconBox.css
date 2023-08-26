@@ -1,0 +1,35 @@
+.icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.8rem;
+    --b: .4rem;
+    /* the border thickness*/
+    --g: .5rem;
+    /* the gap on hover */
+
+    padding: calc(var(--g) + var(--b));
+    --_g: #0000 25%, var(--white) 0;
+    background:
+        conic-gradient(from 180deg at top var(--b) right var(--b), var(--_g)) var(--_i, 200%) 0 /200% var(--_i, var(--b)) no-repeat,
+        conic-gradient(at bottom var(--b) left var(--b), var(--_g)) 0 var(--_i, 200%)/var(--_i, var(--b)) 200% no-repeat;
+        border-radius: var(--radius-xs);
+    transition: .3s, background-position .3s .3s;
+}
+
+
+.icon-box:hover {
+    --_i: 100%;
+    transition: .3s, background-size .3s .3s;
+}
+
+.icon-box__icon {
+    font-size: 4.8rem;
+}
+
+.icon-box__title {
+    font-size: 1.6rem;
+    text-align: center;
+}
